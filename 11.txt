@@ -1,0 +1,21 @@
+#include <stdio.h>
+double factorial_number(double a)
+{
+    double i,factorial = 1;
+   for(i = 1;i <= a;i++){
+        factorial = factorial * i;
+   }
+    return factorial;
+}
+int main() {
+    double a,b,factorial,i;
+    scanf("%lf",&b);
+for(i = 1;i <= b;i++){
+        scanf("%lf",&a);
+    factorial = factorial_number(a);
+    printf("%0.00lf\n",factorial);
+
+}
+
+    return 0;
+}

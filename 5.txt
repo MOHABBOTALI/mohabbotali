@@ -1,0 +1,26 @@
+
+
+#include <stdio.h>
+void draw_aquare(int n)
+{
+    int i,j;
+    for(i = 1;i <= n;i++){
+        for(j = 1;j <= n;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+int main() {
+   int t,m;
+   scanf("%d",&t);
+   while(t--){
+       scanf("%d",&m);
+       draw_aquare(m);
+       if(t > 0){
+       printf("\n");
+       }
+   }
+
+    return 0;
+}

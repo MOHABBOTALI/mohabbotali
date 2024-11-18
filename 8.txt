@@ -1,0 +1,30 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  int t,a,b,c,i,n;
+  scanf("%d",&t);
+  for(i = 1;i <= t;i++){
+      scanf("%d%d%d",&a,&b,&c);
+      printf("Case %d:",i);
+      if(a>b){
+          n = a;
+          a = b;
+          b = n;
+      }
+      if(a>c){
+          n = a;
+          a = c;
+          c = n;
+      }
+      if(b>c){
+          n = b;
+          b = c;
+          c = n;
+      }
+      printf(" %d %d %d\n",a,b,c);
+  }
+  
+
+    return 0;
+}

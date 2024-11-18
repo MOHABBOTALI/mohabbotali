@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int main() {
+    int i,t,last_number,len;
+    char number[102],last_char;
+
+scanf("%d",&t);
+for(i = 1;i <= t;i++){
+    scanf("%s",&number);
+    len = strlen(number);
+    last_char = number[len - 1];
+    last_number = last_char - '0';
+    if(last_number % 2 == 0){
+        printf("even\n");
+    }
+    else{
+        printf("odd\n");
+    }
+}
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include<stdio,h>
+int main(){
+int a,b,i;
+scanf("%d",&a);
+for(i = 1;i <= a;i++)
+{
+scanf("%d",&b);
+if(b % 2 == 0){
+printf("even\n");
+}
+else{
+printf("odd\n");
+}
+}
+return 0 ;
+}

@@ -1,0 +1,30 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+void number_vowel(char s[1000],int c);
+int main() {
+    int t;
+    scanf("%d",&t);
+    getchar();
+    while(t--){
+        char str[1000];
+        int count = 0;
+        gets(str);
+        number_vowel(str,count);
+    }
+
+    return 0;
+}
+void number_vowel(char s[],int c){
+    int i;
+
+    for(i = 0;i <= strlen(s);i++){
+        if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U'){
+       
+            c++;
+        }
+    }
+    printf("Number of vowels = %d\n",c);
+
+return 0;
+}
