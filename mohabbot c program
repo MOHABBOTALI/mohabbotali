@@ -1,0 +1,32 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  int n,t;
+  scanf("%d",&t);
+getchar();
+for(n = 1;n <= t;n++){
+    char s[10001],small[10001],Capital[10001];
+    int i,j = 0,count = 0;
+  gets(s);
+    for(i = 0;i < strlen(s);i++){
+        if(s[i] == 'a' || s[i] == 'e' || s[i] == 'o' || s[i] == 'i' || s[i] == 'u'  ){
+            small[j] = s[i];
+            j++;
+        }
+        small[j] = '\0';
+    }
+    j = 0;
+    count = 0;
+        for(i = 0;i < strlen(s);i++){
+            if(s[i] == 'b' || s[i] == 'c' || s[i] == 'd' || s[i] == 'f' || s[i] == 'g' || s[i] == 'h' || s[i] == 'j' || s[i] == 'k' || s[i] == 'l' || s[i] == 'm' || s[i] == 'n' || s[i] == 'p' || s[i] == 'q' || s[i] == 'r' || s[i] == 's' || s[i] == 't' || s[i] == 'v' || s[i] == 'w' || s[i] == 'x' || s[i] == 'y' || s[i] == 'z' ){
+                Capital[count] = s[i];
+               count++;
+            }
+        }
+          Capital[count] = '\0';
+          printf("%s\n%s\n",small,Capital);
+}
+    return 0;
+}
