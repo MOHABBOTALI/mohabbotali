@@ -1,0 +1,18 @@
+
+
+#include <stdio.h>
+
+void test() {
+    static int count = 0;
+    count++;
+    printf("Count = %d\n", count);
+}
+
+int main() {
+   
+    int i;
+    for(i = 1;i <= 10;i++){
+        test();
+    }
+    return 0;
+}
