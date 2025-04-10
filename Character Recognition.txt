@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    int t;
+    char c;
+    
+    scanf("%d", &t); // টেস্ট কেস সংখ্যা ইনপুট
+
+    while (t--) {
+        scanf(" %c", &c); // ক্যারেক্টার ইনপুট নেওয়া (স্পেস ব্যবহার করে যাতে নিউলাইন স্কিপ হয়)
+
+        if (isupper(c)) {
+            printf("Uppercase Character\n");
+        } 
+        else if (islower(c)) {
+            printf("Lowercase Character\n");
+        } 
+        else if (isdigit(c)) {
+            printf("Numerical Digit\n");
+        } 
+        else {
+            printf("Special Characters\n");
+        }
+    }
+
+    return 0;
+}

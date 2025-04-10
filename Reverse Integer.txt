@@ -1,0 +1,26 @@
+
+
+#include <stdio.h>
+
+
+int c_programming(int num){
+    int rev;
+   while(num != 0){
+       int digit = 0;
+        digit = num % 10;
+    
+     rev = rev * 10 + digit;
+    num /= 10;
+   }
+   return rev;
+}
+
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    
+    printf("%d\n",c_programming(x));
+
+    return 0;
+}

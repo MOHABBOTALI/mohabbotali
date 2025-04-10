@@ -1,0 +1,30 @@
+
+
+#include <stdio.h>
+#include <string.h>
+
+void lit_code_c_programming(char s[1001],char s2[1001]) {
+	int len = strlen(s);
+	int i,count = 0;
+
+	for(i = 0; i <= len; i++) {
+	    if(s[i] == '+' || s[i] == '-'){
+	         s2[count++] = s[i];
+	    }
+		if(s[i] >= '0' && s[i] <= '9'){
+		    s2[count++] = s[i];
+		} 
+		}
+		s2[count] = '\0';
+		printf("%s\n",s2);
+
+}
+
+int main()
+{
+  char s1[1001],s2[1001];
+  scanf("%s", s1);
+  lit_code_c_programming(s1,s2);
+
+	return 0;
+}

@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int t;
+    scanf("%d", &t); // টেস্ট কেস সংখ্যা ইনপুট
+    
+    while (t--) {
+        int n, original, remainder, result = 0;
+        scanf("%d", &n); // তিন অঙ্কের সংখ্যা ইনপুট
+        
+        original = n;
+        
+        while (n != 0) {
+            remainder = n % 10; // শেষ অঙ্ক বের করা
+            result += pow(remainder, 3); // অঙ্কের ৩ পাওয়ার করে যোগ করা
+            n /= 10; // সংখ্যাকে ছোট করা
+        }
+
+        // আর্মস্ট্রং সংখ্যা কিনা যাচাই
+        if (result == original)
+            printf("%d is an armstrong number!\n", original);
+        else
+            printf("%d is not an armstrong number!\n", original);
+    }
+
+    return 0;
+}

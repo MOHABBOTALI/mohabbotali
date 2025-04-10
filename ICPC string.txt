@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void solve(int t, int P, int S, int R) {
+    if (S < P || (S == P && R == 1)) {
+        printf("Case %d: Yes\n", t);
+    } else {
+        printf("Case %d: No\n", t);
+    }
+}
+
+int main() {
+    int T, P, S, R;
+    scanf("%d", &T);
+    for (int i = 1; i <= T; i++) {
+        scanf("%d %d %d", &P, &S, &R);
+        solve(i, P, S, R);
+    }
+    return 0;
+}

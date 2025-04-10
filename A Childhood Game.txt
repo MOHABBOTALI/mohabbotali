@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    for (int t = 1; t <= T; t++) {
+        int n;
+        char starter[10];
+        scanf("%d %s", &n, starter);
+
+        if (strcmp(starter, "Alice") == 0) {
+            // If Alice starts, the player who takes the last marble loses
+            if (n % 3 == 1) {
+                printf("Case %d: Bob\n", t);
+            } else {
+                printf("Case %d: Alice\n", t);
+            }
+        } else {
+            // If Bob starts, the player who takes the last marble wins
+            if (n % 3 == 0) {
+                printf("Case %d: Alice\n", t);
+            } else {
+                printf("Case %d: Bob\n", t);
+            }
+        }
+    }
+
+    return 0;
+}
